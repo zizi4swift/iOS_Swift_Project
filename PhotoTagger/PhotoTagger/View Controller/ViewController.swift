@@ -9,12 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak var takePictureButton: UIButton!
+    @IBOutlet weak var imageVIew: UIImageView!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
+    // MARK: - Properties
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
 
