@@ -25,6 +25,9 @@
                                 <rect key="frame" x="154.5" y="428.5" width="105" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="tackPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v74-Zh-3fL"/>
+                                </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uT2-NH-b35">
                                 <rect key="frame" x="197" y="678" width="20" height="20"/>
@@ -167,6 +170,7 @@
                             <constraint firstAttribute="trailing" secondItem="FkJ-tr-knz" secondAttribute="trailing" id="Jud-ae-TfR"/>
                             <constraint firstItem="FkJ-tr-knz" firstAttribute="leading" secondItem="oaf-hV-swb" secondAttribute="leading" id="NAK-Vm-IHz"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="G7Q-sh-Hqg"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pZ-B9-wFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
