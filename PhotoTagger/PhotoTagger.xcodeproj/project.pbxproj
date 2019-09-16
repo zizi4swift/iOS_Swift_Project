@@ -57,10 +57,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		96915D1F232F15E500F442EB /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				96CBB570232E6F84004DFBD4 /* ViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		96915D20232F15EE00F442EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96915D21232F15F800F442EB /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				96CBB57A232E6F86004DFBD4 /* Info.plist */,
+				96CBB56E232E6F84004DFBD4 /* AppDelegate.swift */,
+			);
+			path = "Support File";
+			sourceTree = "<group>";
+		};
+		96915D22232F161900F442EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				96CBB577232E6F86004DFBD4 /* LaunchScreen.storyboard */,
+				96CBB572232E6F84004DFBD4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		96CBB562232E6F84004DFBD4 = {
 			isa = PBXGroup;
 			children = (
 				96CBB56D232E6F84004DFBD4 /* PhotoTagger */,
+				96CBB575232E6F86004DFBD4 /* Assets.xcassets */,
 				96CBB56C232E6F84004DFBD4 /* Products */,
 				675BF6597374F46CDCE9E72A /* Pods */,
 				533085628ADECFD9B4663DD3 /* Frameworks */,
@@ -78,12 +112,10 @@
 		96CBB56D232E6F84004DFBD4 /* PhotoTagger */ = {
 			isa = PBXGroup;
 			children = (
-				96CBB56E232E6F84004DFBD4 /* AppDelegate.swift */,
-				96CBB570232E6F84004DFBD4 /* ViewController.swift */,
-				96CBB572232E6F84004DFBD4 /* Main.storyboard */,
-				96CBB575232E6F86004DFBD4 /* Assets.xcassets */,
-				96CBB577232E6F86004DFBD4 /* LaunchScreen.storyboard */,
-				96CBB57A232E6F86004DFBD4 /* Info.plist */,
+				96915D22232F161900F442EB /* View */,
+				96915D21232F15F800F442EB /* Support File */,
+				96915D20232F15EE00F442EB /* Model */,
+				96915D1F232F15E500F442EB /* View Controller */,
 			);
 			path = PhotoTagger;
 			sourceTree = "<group>";
@@ -359,7 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PhotoTagger/Info.plist;
+				INFOPLIST_FILE = "PhotoTagger/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,7 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PhotoTagger/Info.plist;
+				INFOPLIST_FILE = "PhotoTagger/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
