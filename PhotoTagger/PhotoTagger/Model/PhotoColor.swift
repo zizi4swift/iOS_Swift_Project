@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// 写真の色パターン
 struct PhotoColor {
     let red: Int
     let green: Int
