@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0EA0B294FF6964A2158D6886 /* Pods_PhotoTagger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CA6CAE601D3554072111D /* Pods_PhotoTagger.framework */; };
+		96090611232F57ED0014B808 /* PhotoColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96090610232F57ED0014B808 /* PhotoColor.swift */; };
 		96915D25232F1A5700F442EB /* TagsColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96915D24232F1A5700F442EB /* TagsColorsViewController.swift */; };
 		96915D27232F1D7E00F442EB /* TagsColorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96915D26232F1D7E00F442EB /* TagsColorsTableViewController.swift */; };
 		96CBB56F232E6F84004DFBD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CBB56E232E6F84004DFBD4 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 		3245A9BB12B1BC7DE06FE820 /* Pods-PhotoTagger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTagger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTagger/Pods-PhotoTagger.debug.xcconfig"; sourceTree = "<group>"; };
 		3F9CA6CAE601D3554072111D /* Pods_PhotoTagger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoTagger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7A41674B2C1BE3B55E19B5 /* Pods-PhotoTagger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoTagger.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoTagger/Pods-PhotoTagger.release.xcconfig"; sourceTree = "<group>"; };
+		96090610232F57ED0014B808 /* PhotoColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoColor.swift; sourceTree = "<group>"; };
 		96915D24232F1A5700F442EB /* TagsColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsColorsViewController.swift; sourceTree = "<group>"; };
 		96915D26232F1D7E00F442EB /* TagsColorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsColorsTableViewController.swift; sourceTree = "<group>"; };
 		96CBB56B232E6F84004DFBD4 /* PhotoTagger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTagger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 		96915D20232F15EE00F442EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				96090610232F57ED0014B808 /* PhotoColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96915D25232F1A5700F442EB /* TagsColorsViewController.swift in Sources */,
+				96090611232F57ED0014B808 /* PhotoColor.swift in Sources */,
 				96CBB571232E6F84004DFBD4 /* ViewController.swift in Sources */,
 				96915D27232F1D7E00F442EB /* TagsColorsTableViewController.swift in Sources */,
 				96CBB56F232E6F84004DFBD4 /* AppDelegate.swift in Sources */,
