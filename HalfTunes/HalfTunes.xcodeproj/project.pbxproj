@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		96CB6C7C235BCB10003E091B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB6C7B235BCB10003E091B /* AppDelegate.swift */; };
-		96CB6C80235BCB10003E091B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB6C7F235BCB10003E091B /* ViewController.swift */; };
 		96CB6C83235BCB10003E091B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB6C81235BCB10003E091B /* Main.storyboard */; };
 		96CB6C85235BCB14003E091B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB6C84235BCB14003E091B /* Assets.xcassets */; };
 		96CB6C88235BCB14003E091B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB6C86235BCB14003E091B /* LaunchScreen.storyboard */; };
 		96CB6C96235BCC2C003E091B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB6C95235BCC2C003E091B /* SceneDelegate.swift */; };
+		96CB6C98235BD872003E091B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB6C97235BD872003E091B /* SearchViewController.swift */; };
+		96CB6C9A235C1891003E091B /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB6C99235C1891003E091B /* TrackCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		96CB6C78235BCB10003E091B /* HalfTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalfTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CB6C7B235BCB10003E091B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96CB6C7F235BCB10003E091B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96CB6C82235BCB10003E091B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96CB6C84235BCB14003E091B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96CB6C87235BCB14003E091B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96CB6C89235BCB14003E091B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96CB6C95235BCC2C003E091B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		96CB6C97235BD872003E091B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		96CB6C99235C1891003E091B /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		96CB6C8F235BCB26003E091B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				96CB6C99235C1891003E091B /* TrackCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -110,7 +113,7 @@
 		96CB6C94235BCB42003E091B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				96CB6C7F235BCB10003E091B /* ViewController.swift */,
+				96CB6C97235BD872003E091B /* SearchViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -186,9 +189,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96CB6C80235BCB10003E091B /* ViewController.swift in Sources */,
+				96CB6C98235BD872003E091B /* SearchViewController.swift in Sources */,
 				96CB6C7C235BCB10003E091B /* AppDelegate.swift in Sources */,
 				96CB6C96235BCC2C003E091B /* SceneDelegate.swift in Sources */,
+				96CB6C9A235C1891003E091B /* TrackCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
