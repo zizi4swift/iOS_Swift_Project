@@ -21,6 +21,11 @@ class SearchViewController: UIViewController {
         return recognizer
     }()
     
+    var searchResults: [Track] = []
+    
+    // MARK: - Constants
+    let queryService = QueryService()
+    
     // MARK: - View Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +52,22 @@ extension SearchViewController: UISearchBarDelegate {
         // インジケーターを表示する
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        // TODO: - 検索結果を取得する機能実装
+        // 検索結果を取得する
+        queryService.getSearchResults(searchTerm: searchText) { [weak self](results, errorMessage) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            
+            if !errorMessage.isEmpty {
+                print("Search error: " + errorMessage)
+            }
+            
+            if let results = results {
+                self?.searchResults = results
+                // tableviewをリフレッシュする
+                self?.tableView.reloadData()
+                // tableviewの頂部まで表示する
+                self?.tableView.setContentOffset(.zero, animated: false)
+            }
+        }
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
