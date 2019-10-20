@@ -12,9 +12,23 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
+    let tintColor = UIColor(red: 242 / 255,
+                            green: 71 / 255,
+                            blue: 63 / 255,
+                            alpha: 1)
+    
+    var backgroundSessionCompletionHandler: (() -> Void)?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 検索バーの色を設置する
+        customizeAppearance()
         return true
+    }
+    
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+        backgroundSessionCompletionHandler = completionHandler
     }
 
     // MARK: UISceneSession Lifecycle
@@ -32,7 +46,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
+    /// 検索バーの色を設置するメソッド
+    private func customizeAppearance() {
+        window?.tintColor = tintColor
+        
+        UISearchBar.appearance().barTintColor = tintColor
+        UINavigationBar.appearance().barTintColor = tintColor
+        UINavigationBar.appearance().tintColor = .white
+        
+        let titleTextAttributes = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue) : UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = titleTextAttributes
+    }
+    
 }
 
