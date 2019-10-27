@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961FF56623626E380014F74D /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961FF56523626E380014F74D /* Download.swift */; };
 		96CB6C7C235BCB10003E091B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB6C7B235BCB10003E091B /* AppDelegate.swift */; };
 		96CB6C83235BCB10003E091B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB6C81235BCB10003E091B /* Main.storyboard */; };
 		96CB6C85235BCB14003E091B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB6C84235BCB14003E091B /* Assets.xcassets */; };
@@ -14,11 +15,13 @@
 		96CB6C96235BCC2C003E091B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB6C95235BCC2C003E091B /* SceneDelegate.swift */; };
 		96CB6C98235BD872003E091B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB6C97235BD872003E091B /* SearchViewController.swift */; };
 		96CB6C9A235C1891003E091B /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB6C99235C1891003E091B /* TrackCell.swift */; };
+		96D2A7802365C2FB00B13A2A /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D2A77F2365C2FB00B13A2A /* DownloadService.swift */; };
 		96E12AC3235C39DE0003C6CB /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E12AC2235C39DE0003C6CB /* QueryService.swift */; };
 		96E12AC5235C3A4A0003C6CB /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E12AC4235C3A4A0003C6CB /* Track.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		961FF56523626E380014F74D /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		96CB6C78235BCB10003E091B /* HalfTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalfTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CB6C7B235BCB10003E091B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96CB6C82235BCB10003E091B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		96CB6C95235BCC2C003E091B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		96CB6C97235BD872003E091B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		96CB6C99235C1891003E091B /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		96D2A77F2365C2FB00B13A2A /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		96E12AC2235C39DE0003C6CB /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		96E12AC4235C3A4A0003C6CB /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				96E12AC4235C3A4A0003C6CB /* Track.swift */,
+				961FF56523626E380014F74D /* Download.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				96E12AC2235C39DE0003C6CB /* QueryService.swift */,
+				96D2A77F2365C2FB00B13A2A /* DownloadService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -196,10 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CB6C98235BD872003E091B /* SearchViewController.swift in Sources */,
+				96D2A7802365C2FB00B13A2A /* DownloadService.swift in Sources */,
 				96CB6C7C235BCB10003E091B /* AppDelegate.swift in Sources */,
 				96E12AC3235C39DE0003C6CB /* QueryService.swift in Sources */,
 				96CB6C96235BCC2C003E091B /* SceneDelegate.swift in Sources */,
 				96CB6C9A235C1891003E091B /* TrackCell.swift in Sources */,
+				961FF56623626E380014F74D /* Download.swift in Sources */,
 				96E12AC5235C3A4A0003C6CB /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

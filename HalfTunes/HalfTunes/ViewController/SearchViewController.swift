@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class SearchViewController: UIViewController {
     
@@ -25,6 +26,8 @@ class SearchViewController: UIViewController {
     
     // MARK: - Constants
     let queryService = QueryService()
+    let downloadService = DownloadService()
+    let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
     
     // MARK: - View Cycle Life
     override func viewDidLoad() {
@@ -36,6 +39,27 @@ class SearchViewController: UIViewController {
     /// キーボードを隠すメソッド
     @objc func dismissKeyboard() {
         searchBar.resignFirstResponder()
+    }
+    
+    /// TableViewの指定行をリフレッシュするメソッド
+    /// - Parameter row: 指定された行
+    func reload(_ row: Int) {
+        tableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .none)
+    }
+    
+    func localFilePath(for url: URL) -> URL? {
+        guard let localFilePath = documentsPath?.appendingPathComponent(url.lastPathComponent) else { return nil }
+        return localFilePath
+    }
+    
+    func playDownload(_ track: Track) {
+        let playerViewController = AVPlayerViewController()
+        present(playerViewController, animated: true, completion: nil)
+        
+        guard let url = localFilePath(for: track.previewURL) else { return }
+        let player = AVPlayer(url: url)
+        playerViewController.player = player
+        player.play()
     }
 }
 
@@ -80,3 +104,74 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
+// MARK: - TableView Data Source
+extension SearchViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell: TrackCell = tableView.dequeueReusableCell(withIdentifier: TrackCell.identifier, for: indexPath) as? TrackCell else { return UITableViewCell() }
+        
+        cell.delegate = self
+        
+        let track = searchResults[indexPath.row]
+        cell.configure(track: track,
+                       downloaded: track.downloaded,
+                       download: downloadService.activeDownloads[track.previewURL] )
+        return cell
+    }
+}
+
+// MARK: - TableView Delegate
+extension SearchViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let track = searchResults[indexPath.row]
+        
+        if track.downloaded {
+            playDownload(track)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 62.0
+    }
+}
+
+// MARK: - Track Cell Delegate
+extension SearchViewController: TrackCellDelegate {
+    
+    func pauseTapped(_ cell: TrackCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            let track = searchResults[indexPath.row]
+            downloadService.pauseDownload(track)
+            reload(indexPath.row)
+        }
+    }
+    
+    func resumeTapped(_ cell: TrackCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            let track = searchResults[indexPath.row]
+            downloadService.resumeDownload(track)
+            reload(indexPath.row)
+        }
+    }
+    
+    func cancelTapped(_ cell: TrackCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            let track = searchResults[indexPath.row]
+            downloadService.cancelDownload(track)
+            reload(indexPath.row)
+        }
+    }
+    
+    func downloadTapped(_ cell: TrackCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            let track = searchResults[indexPath.row]
+            downloadService.startDownload(track)
+            reload(indexPath.row)
+        }
+    }
+    
+}

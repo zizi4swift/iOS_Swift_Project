@@ -64,7 +64,7 @@
                                                         <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="pauseButtonTapped:" destination="gSn-1D-vvz" eventType="touchUpInside" id="se3-rO-OSa"/>
+                                                        <action selector="pauseOrResumeButtonTapped:" destination="gSn-1D-vvz" eventType="touchUpInside" id="se3-rO-OSa"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Y2-16-CH2">
@@ -87,11 +87,9 @@
                                                 <constraint firstItem="u7z-Uy-91p" firstAttribute="top" secondItem="wYf-bd-mBH" secondAttribute="bottom" constant="1" id="1AK-vC-jyn"/>
                                                 <constraint firstItem="R9b-E7-eUy" firstAttribute="top" secondItem="EK0-Fe-qib" secondAttribute="top" constant="12" id="376-F6-Y1w"/>
                                                 <constraint firstItem="q4o-US-Vkz" firstAttribute="top" secondItem="R9b-E7-eUy" secondAttribute="top" id="5kB-yl-cYJ"/>
-                                                <constraint firstItem="q4o-US-Vkz" firstAttribute="leading" secondItem="u7z-Uy-91p" secondAttribute="trailing" constant="254" id="9lI-bi-M68"/>
                                                 <constraint firstItem="Kfv-b3-1fW" firstAttribute="leading" secondItem="SxO-Mg-lH1" secondAttribute="trailing" constant="11" id="A95-p5-wIQ"/>
                                                 <constraint firstItem="SxO-Mg-lH1" firstAttribute="leading" secondItem="u7z-Uy-91p" secondAttribute="leading" id="Dhb-rs-0cm"/>
                                                 <constraint firstItem="Kfv-b3-1fW" firstAttribute="trailing" secondItem="R9b-E7-eUy" secondAttribute="trailing" id="Oxb-rz-E5h"/>
-                                                <constraint firstItem="4Y2-16-CH2" firstAttribute="leading" secondItem="wYf-bd-mBH" secondAttribute="trailing" constant="282" id="S7c-cb-1dM"/>
                                                 <constraint firstItem="Kfv-b3-1fW" firstAttribute="leading" secondItem="q4o-US-Vkz" secondAttribute="leading" id="SOw-3y-H1v"/>
                                                 <constraint firstItem="wYf-bd-mBH" firstAttribute="top" secondItem="EK0-Fe-qib" secondAttribute="top" constant="8" id="d2n-GE-Yte"/>
                                                 <constraint firstItem="SxO-Mg-lH1" firstAttribute="centerY" secondItem="Kfv-b3-1fW" secondAttribute="centerY" constant="2" id="hx6-zX-UYi"/>
@@ -116,6 +114,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bYb-CT-ney"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Cb2-jh-go0"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
